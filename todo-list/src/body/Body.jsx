@@ -1,5 +1,6 @@
 import { useState } from "react"
 import SearchBar from "../searchbar/SearchBar"
+import './Body.css'
 
 
 const Body = () => {
@@ -18,14 +19,21 @@ const Body = () => {
     <>
       <SearchBar onAddTask={addTask} />
       {tasks.length < 1 ? (
-        <p>Add some tasks</p>
+        <p className="empty-body">Add some tasks</p>
       ) : (
         <ul>
           {tasks.map((task) => (
             <div key={task.id}>
               <li>
-                {task.name}
-                <button onClick={() => handleTaskDone(task.id)}>Done</button>
+                <div className="body-task-content">
+                  <span className="body-task">{task.name}</span>
+                  <button
+                    className="body-button-done"
+                    onClick={() => handleTaskDone(task.id)}
+                  >
+                    Done
+                  </button>
+                </div>
               </li>
             </div>
           ))}

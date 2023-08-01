@@ -1,0 +1,43 @@
+.empty-body {
+  text-align: center;
+  margin-top: 120px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 50px;
+   color: gray;
+}
+
+.body-task {
+  font-family: "Fira Code", monospace;
+  font-weight: bolder;
+  font-size: 25px;
+  border: blue 1px solid;
+  display: flex;
+  width: 400px;
+  padding: 3px 3px;
+}
+
+.body-task-content {
+  display: flex; /* Altere para flex para que os elementos internos ocupem a largura */
+  align-items: center; /* Centralize verticalmente o conteúdo */
+}
+
+.body-button-done {
+  margin: 5px;
+  background-color: gray;
+  font-size: 20px;
+  padding: 7px 3px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.body-button-done:hover {
+  background-color: rgb(180, 2, 2);
+}
+
+ul  {
+  list-style: none;
+  margin-left: 15px;
+  padding: 0;
+}

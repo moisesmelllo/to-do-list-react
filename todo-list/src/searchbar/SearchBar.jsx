@@ -5,6 +5,7 @@ const SearchBar = ({onAddTask}) => {
   const [inputValue, setInputValue] = useState('')
 
   const handleInputChange = (event) => {
+    
     setInputValue(event.target.value)
     console.log(inputValue)
   }
@@ -16,15 +17,26 @@ const SearchBar = ({onAddTask}) => {
     }
   }
 
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      handleButtonClick();
+    }
+  }
+
   return (
-    <div className='searchbar'>
-      <input 
-      className="input-searchbar" 
-      type="search" 
-      placeholder="Adicionar tarefa"
-      value={inputValue}
-      onChange={handleInputChange}/>
-      <button className="btn add-btn" onClick={handleButtonClick}>Add</button>
+    <div className="searchbar">
+      <input
+        className="input-searchbar"
+        type="search"
+        placeholder="Adicionar tarefa"
+        value={inputValue}
+        maxLength={25}
+        onKeyPress={handleKeyPress}
+        onChange={handleInputChange}
+      />
+      <button className="btn add-btn" onClick={handleButtonClick}>
+        Add
+      </button>
     </div>
   )
 }
