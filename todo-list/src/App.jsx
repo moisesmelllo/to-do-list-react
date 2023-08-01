@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import NavbarComponent from './navbar/NavbarComponent'
 import SearchBar from './searchbar/SearchBar'
+import Body from './body/Body'
 import './app.css'
 
 
@@ -12,10 +13,8 @@ function App() {
       <div className="flexbox">
         <section>
           <NavbarComponent />
-          <SearchBar />
-          <div style={{ background: 'red' }}>
-            <h1>corpo</h1>
-          </div>
+
+          <Body />
         </section>
       </div>
     </div>
