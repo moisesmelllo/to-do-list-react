@@ -2,7 +2,7 @@ import { useState } from 'react'
 import NavbarComponent from './navbar/NavbarComponent'
 import SearchBar from './searchbar/SearchBar'
 import Body from './body/Body'
-import './app.css'
+import './App.css'
 
 
 function App() {
