@@ -1,7 +1,7 @@
 import { useState } from "react"
 import SearchBar from "../searchbar/SearchBar"
 import './Body.css'
-
+import CloseIcon from '@mui/icons-material/Close'
 
 const Body = () => {
   const [tasks, setTasks] = useState([]);
@@ -31,7 +31,8 @@ const Body = () => {
                     className="body-button-done"
                     onClick={() => handleTaskDone(task.id)}
                   >
-                    Done
+                    <CloseIcon
+                    />
                   </button>
                 </div>
               </li>

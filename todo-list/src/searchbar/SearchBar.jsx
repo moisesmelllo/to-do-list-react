@@ -1,5 +1,7 @@
 import './searchbar.css'
 import { useState } from 'react'
+import IconButton from '@mui/material/Button'
+import AddIcon from '@mui/icons-material/Add'
 
 const SearchBar = ({onAddTask}) => {
   const [inputValue, setInputValue] = useState('')
@@ -34,9 +36,9 @@ const SearchBar = ({onAddTask}) => {
         onKeyPress={handleKeyPress}
         onChange={handleInputChange}
       />
-      <button className="btn add-btn" onClick={handleButtonClick}>
-        Add
-      </button>
+      <IconButton onClick={handleButtonClick} className="add-btn" aria-label="add" size="large">
+        <AddIcon className="add-btn" />
+      </IconButton>
     </div>
   )
 }
