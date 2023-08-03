@@ -29,7 +29,7 @@ const SearchBar = ({onAddTask}) => {
     <div className="searchbar">
       <input
         className="input-searchbar"
-        type="search"
+        type="text"
         placeholder="Adicionar tarefa"
         value={inputValue}
         maxLength={25}
