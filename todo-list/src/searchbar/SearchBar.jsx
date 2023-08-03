@@ -32,7 +32,7 @@ const SearchBar = ({onAddTask}) => {
         type="text"
         placeholder="Adicionar tarefa"
         value={inputValue}
-        maxLength={25}
+        maxLength={15}
         onKeyPress={handleKeyPress}
         onChange={handleInputChange}
       />
