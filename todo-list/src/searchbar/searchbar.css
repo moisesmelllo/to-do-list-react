@@ -1,4 +1,5 @@
 .searchbar {
+  display: flex;
   justify-content: center;
 }
 
@@ -25,4 +26,18 @@
 
 .add-btn:hover {
   background-color: rgb(1, 95, 1);
+}
+
+
+@media screen and (max-width: 768px) {
+  .searchbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-searchbar {
+    width: 100%;
+    max-width: 300px; /* Defina um tamanho máximo adequado para evitar ultrapassar o limite */
+    margin: 10px 0;
+  }
 }
